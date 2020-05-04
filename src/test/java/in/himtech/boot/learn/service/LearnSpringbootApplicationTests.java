@@ -1,4 +1,4 @@
-package in.himtech3.learn;
+package in.himtech.boot.learn.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
