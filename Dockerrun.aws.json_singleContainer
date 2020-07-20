@@ -1,0 +1,12 @@
+{
+	"AWSEBDockerrunVersion": "1",
+  	"Image": {
+    	"Name": "hupadhyay/learnspringboot"
+  	},
+  	"Ports": [
+    	{
+      		"ContainerPort": 8080,
+      		"HostPort": 5000
+    	}
+  	]
+}     

@@ -51,6 +51,11 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		
 		<!-- This will give you hal browser to test your application properties on the browser. Launch with http://localhost:8080 -->
 	 <dependency>
 			<groupId>org.springframework.data</groupId>
@@ -83,6 +88,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>learnSpringBoot</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

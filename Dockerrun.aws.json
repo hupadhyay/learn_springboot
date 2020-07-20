@@ -1,0 +1,36 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [{
+			"name": "himmysql",
+			"image": "mysql:5.7",
+			"environment": [{
+					"name": "MYSQL_ROOT_PASSWORD",
+					"value": "himserver"
+				},
+				{
+					"name": "MYSQL_DATABASE",
+					"value": "himdb"
+				}
+			],
+			"essential": true,
+			"memory": 256,
+			"portMappings": [{
+				"hostPort": 3306,
+				"containerPort": 3306
+			}]
+		},
+		{
+			"name": "him-app",
+			"image": "hupadhyay/learnspringboot",
+			"essential": true,
+			"memory": 128,
+			"portMappings": [{
+				"hostPort": 8080,
+				"containerPort": 5000
+			}],
+			"links": [
+				"himmysql"
+			]
+		}
+	]
+}
